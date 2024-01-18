@@ -1,6 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import creations from '../views/CreationsView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import CreationsView from '../views/CreationsView.vue';
+import ContactView from '../views/ContactView.vue';
+import NotFound from '../views/NotFound.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,15 +15,20 @@ const router = createRouter({
     {
       path: '/creations',
       name: 'creations',
-      component: creations
-    }, 
-
+      component: CreationsView
+    },
     {
       path: '/contact',
       name: 'contact',
-      component:  () => import('../views/ContactView.vue')
+      component: () => import('../views/ContactView.vue')
+    },
+    
+    {
+      path: '/:catchAll(.*)',
+      name: 'NotFound',
+      component: () => import('../views/NotFound.vue')
     }
   ]
-})
+});
 
-export default router
+export default router;

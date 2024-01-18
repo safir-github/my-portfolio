@@ -110,7 +110,7 @@ modals.forEach(function (modal, index) {
     
         <div class="modal">
           <div class="modal-content">
-            
+
             <button class="close-modal">Retour</button>
     
             <p> Dynamiser un Espace Commentaire - 04/01/2024 <br> Technologies utilisées - HTML5 / JS <br> <a target="_blank" class="link-site" href="https://safir-github.github.io/comment-section/">- Visiter le Site -</a> <br> <a target="_blank" class="link-site" href="https://github.com/safir-github/comment-section">- Visiter le Repository -</a></p>
@@ -165,7 +165,7 @@ modals.forEach(function (modal, index) {
 }
 
 main {
-  height: 3900px;
+  height: 260em;
 }
 
 h1 {

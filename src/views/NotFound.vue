@@ -8,10 +8,25 @@ export default {
 
 <template>
 
-    <div>
-      <h1>404</h1>
-      <p>Page not found</p>
-    </div>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>404 Page</title>
+    </head>
+
+    <body>
+
+        <main>
+            <div>
+                <h1>404</h1>
+                <p>Page not found</p>
+            </div>
+        </main>
+        
+    </body>
+    </html>
 
   </template>
   

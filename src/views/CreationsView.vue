@@ -37,121 +37,102 @@ modals.forEach(function (modal, index) {
 
 <template>
 
-  <!DOCTYPE html>
-  <html lang="fr">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Explorez les créations et projets de Safir Lemoudaa, développeur web et mobile passionné par l'innovation et la création. Découvrez ses réalisations, compétences et contributions dans le domaine du développement.">
-      <meta name="keywords" content="développeur web, développeur web mobile, innovation, création, HTML, CSS, JavaScript, portfolio, projets, compétences">
-      <meta name="author" content="Safir Lemoudaa">
-      <meta name="robots" content="index, follow"> 
-      <title>Mon Portfolio - Mes Créations</title>
-    </head>
+  <main>
 
-    <body>
+    <!-- conseil pour résoudre ce problème d'ouverture de la modal -->
+    <p class="modal-bug">(Si les modals ne s'ouvrent pas, pensez à actualiser la page !)</p>
 
-    <main>
+    <h1><span>Mes Créations</span></h1>
 
-      <!-- conseil pour résoudre ce problème d'ouverture de la modal -->
-      <p class="modal-bug">(Si les modals ne s'ouvrent pas, pensez à actualiser la page !)</p>
+    <p class="presentation">Bienvenue dans la page de mon Portfolio qui présente <span>Mes Créations</span>, <br> qui ont marqué mes premiers pas dans l'univers du Développement Web !<br><br></p>
 
-      <h1><span>Mes Créations</span></h1>
+    <!-- pour la présentation des créations -->
+    <section class="section-creations">
+      <div class="div-creation">
 
-      <p class="presentation">Bienvenue dans la page de mon Portfolio qui présente <span>Mes Créations</span>, <br> qui ont marqué mes premiers pas dans l'univers du Développement Web !<br><br></p>
+        <h2 class="first-h2"><span>Création 1 - Le CV</span></h2>
 
-      <!-- pour la présentation des créations -->
-      <section class="section-creations">
-        <div class="div-creation">
+        <p> Découvre le premier projet que j'ai réalisé, à l'aide du html et du css !</p>
 
-          <h2 class="first-h2"><span>Création 1 - Le CV</span></h2>
+        <img class="img-flou" src="../images/image-cv-1.png" alt="une image flou">
 
-          <p> Découvre le premier projet que j'ai réalisé, à l'aide du html et du css !</p>
+        <button class="open-modal">Voir Plus !</button>
 
-          <img class="img-flou" src="../images/image-cv-1.png" alt="une image flou">
+        <div class="modal">
+          <div class="modal-content">
 
-          <button class="open-modal">Voir Plus !</button>
+            <button class="close-modal">Retour</button>
 
-          <div class="modal">
-            <div class="modal-content">
+            <p> CV en HTML et CSS - 26/12/2023 <br> Technologies utilisées - HTML5 / CSS3 <br> <a target="_blank" class="link-site" href="https://safir-github.github.io/cv-html-css/">- Visiter le Site -</a> <br> <a target="_blank" class="link-site" href="https://github.com/safir-github/cv-html-css">- Visiter le Repository -</a></p>
 
-              <button class="close-modal">Retour</button>
-
-              <p> CV en HTML et CSS - 26/12/2023 <br> Technologies utilisées - HTML5 / CSS3 <br> <a target="_blank" class="link-site" href="https://safir-github.github.io/cv-html-css/">- Visiter le Site -</a> <br> <a target="_blank" class="link-site" href="https://github.com/safir-github/cv-html-css">- Visiter le Repository -</a></p>
-
-              <img class="img-modal" src="../images/cv-p1-4.png" alt="un morceau du projet">
-              <img class="img-modal" src="../images/cv-p2.png" alt="un morceau du projet">
-              <img class="img-modal" src="../images/cv-p3.png" alt="un morceau du projet">
-              <img class="img-modal" src="../images/cv-p4.png" alt="un morceau du projet">
-            </div>
+            <img class="img-modal" src="../images/cv-p1-4.png" alt="un morceau du projet">
+            <img class="img-modal" src="../images/cv-p2.png" alt="un morceau du projet">
+            <img class="img-modal" src="../images/cv-p3.png" alt="un morceau du projet">
+            <img class="img-modal" src="../images/cv-p4.png" alt="un morceau du projet">
           </div>
-
         </div>
 
-        <div class="div-creation">
-
-          <h2><span>Création 2 - Le Cahier des Charges</span></h2>
-
-          <p> Découvre le second projet que j'ai réalisé, cette fois au format PDF !</p>
-
-          <img class="img-flou" src="../images/cdc-flou.png" alt="une image flou">
-
-          <button class="open-modal">Voir Plus !</button>
-
-          <div class="modal">
-            <div class="modal-content">
-
-              <button class="close-modal">Retour</button>
-
-              <p> Cahier des Charges - 28/12/2023 <br> Technologies utilisées - / Pas de code - Constructeur de PDF / <br> <a target="_blank" class="link-site" href="https://safir-github.github.io/CDC-repository/">- Consulter le PDF -</a></p>
-
-              <img class="img-modal" src="../images/cdc-p1.png" alt="un morceau du projet">
-              <img class="img-modal" src="../images/cdc-p2.png" alt="un morceau du projet">
-              <img class="img-modal" src="../images/cdc-p3.png" alt="un morceau du projet">
-            </div>
-          </div>
-
-        </div>
-
-        <div class="div-creation">
-
-          <h2><span>Création 3 - Dynamiser un Espace Commentaire</span></h2>
-
-          <p> Découvre le premier projet qui m'a permis de découvrir le language JavaScript !</p>
-
-          <img class="img-flou" src="../images/comment-section-flou.png" alt="une image flou">
-
-          <button class="open-modal">Voir Plus !</button>
-
-          <div class="modal">
-            <div class="modal-content">
-              
-              <button class="close-modal">Retour</button>
-
-              <p> Dynamiser un Espace Commentaire - 04/01/2024 <br> Technologies utilisées - HTML5 / JS <br> <a target="_blank" class="link-site" href="https://safir-github.github.io/comment-section/">- Visiter le Site -</a> <br> <a target="_blank" class="link-site" href="https://github.com/safir-github/comment-section">- Visiter le Repository -</a></p>
-
-              <img class="img-modal" src="../images/comment-p3.png" alt="un morceau du projet">
-              <img class="img-modal" src="../images/comment-p1.png" alt="un morceau du projet">
-              <img class="img-modal" src="../images/comment-p2.png" alt="un morceau du projet">
-                              
-              </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <div class="div-top-of-page">
-        <a href="#header"><img class="top-of-page" src="../images/logo2.png" alt="logo"></a>
       </div>
 
-    </main>
-    
-  </body>
-  </html>
+      <div class="div-creation">
 
-  
-  
+        <h2><span>Création 2 - Le Cahier des Charges</span></h2>
+
+        <p> Découvre le second projet que j'ai réalisé, cette fois au format PDF !</p>
+
+        <img class="img-flou" src="../images/cdc-flou.png" alt="une image flou">
+
+        <button class="open-modal">Voir Plus !</button>
+
+        <div class="modal">
+          <div class="modal-content">
+
+            <button class="close-modal">Retour</button>
+
+            <p> Cahier des Charges - 28/12/2023 <br> Technologies utilisées - / Pas de code - Constructeur de PDF / <br> <a target="_blank" class="link-site" href="https://safir-github.github.io/CDC-repository/">- Consulter le PDF -</a></p>
+
+            <img class="img-modal" src="../images/cdc-p1.png" alt="un morceau du projet">
+            <img class="img-modal" src="../images/cdc-p2.png" alt="un morceau du projet">
+            <img class="img-modal" src="../images/cdc-p3.png" alt="un morceau du projet">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="div-creation">
+
+        <h2><span>Création 3 - Dynamiser un Espace Commentaire</span></h2>
+
+        <p> Découvre le premier projet qui m'a permis de découvrir le language JavaScript !</p>
+
+        <img class="img-flou" src="../images/comment-section-flou.png" alt="une image flou">
+
+        <button class="open-modal">Voir Plus !</button>
+
+        <div class="modal">
+          <div class="modal-content">
+            
+            <button class="close-modal">Retour</button>
+
+            <p> Dynamiser un Espace Commentaire - 04/01/2024 <br> Technologies utilisées - HTML5 / JS <br> <a target="_blank" class="link-site" href="https://safir-github.github.io/comment-section/">- Visiter le Site -</a> <br> <a target="_blank" class="link-site" href="https://github.com/safir-github/comment-section">- Visiter le Repository -</a></p>
+
+            <img class="img-modal" src="../images/comment-p3.png" alt="un morceau du projet">
+            <img class="img-modal" src="../images/comment-p1.png" alt="un morceau du projet">
+            <img class="img-modal" src="../images/comment-p2.png" alt="un morceau du projet">
+                            
+            </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="div-top-of-page">
+      <a href="#header"><img class="top-of-page" src="../images/logo2.png" alt="logo"></a>
+    </div>
+
+  </main>
+
 </template>
 
 <style scoped>

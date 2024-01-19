@@ -1,37 +1,35 @@
 <script setup>
+import { ref, onMounted } from 'vue';
 
-document.addEventListener("DOMContentLoaded", function () {
+onMounted(() => {
+  // pour récupérer les boutons et modals
+  let openButtons = document.querySelectorAll(".open-modal");
+  let closeButtons = document.querySelectorAll(".close-modal");
+  let modals = document.querySelectorAll(".modal");
 
-// pour récupérer les boutons et modals
-let openButtons = document.querySelectorAll(".open-modal");
-let closeButtons = document.querySelectorAll(".close-modal");
-let modals = document.querySelectorAll(".modal");
-
-// pour faire appaître la modal au clic du bouton open
-openButtons.forEach(function (button, index) {
+  // pour faire appaître la modal au clic du bouton open
+  openButtons.forEach(function (button, index) {
     button.addEventListener("click", function () {
-        modals[index].style.display = "block";
+      modals[index].style.display = "block";
     });
-});
+  });
 
-// pour faire disparaître la modal au clic du bouton close
-closeButtons.forEach(function (button, index) {
+  // pour faire disparaître la modal au clic du bouton close
+  closeButtons.forEach(function (button, index) {
     button.addEventListener("click", function () {
-        modals[index].style.display = "none";
+      modals[index].style.display = "none";
     });
-});
+  });
 
-
-// pour fermer la modal lorsqu'on clic en dehors d'elle
-window.addEventListener("click", function (event) {
-modals.forEach(function (modal, index) {
-    if (!modal.contains(event.target) && !event.target.classList.contains("open-modal")) {
+  // pour fermer la modal lorsqu'on clic en dehors d'elle
+  window.addEventListener("click", function (event) {
+    modals.forEach(function (modal, index) {
+      if (!modal.contains(event.target) && !event.target.classList.contains("open-modal")) {
         modals[index].style.display = "none";
-    }
+      }
+    });
+  });
 });
-});
-});
-
 </script>
 
 
@@ -39,7 +37,6 @@ modals.forEach(function (modal, index) {
 
   <main>
 
-    <!-- conseil pour résoudre ce problème d'ouverture de la modal -->
     <p class="modal-bug">(Si les modals ne s'ouvrent pas, pensez à actualiser la page !)</p>
 
     <h1><span>Mes Créations</span></h1>
@@ -52,7 +49,7 @@ modals.forEach(function (modal, index) {
 
         <h2 class="first-h2"><span>Création 1 - Le CV</span></h2>
 
-        <p> Découvre le premier projet que j'ai réalisé, à l'aide du html et du css !</p>
+        <p> Découvre le premier projet que j'ai réalisé, à l'aide du html et du css ! <br> Ce projet est la première montagne que j'ai dû gravir. <br> À ce moment-là, j'avais commencé à me familiariser avec le langage HTML <br> et je venais tout juste de découvrir le CSS, qui me paraissait plus complexe à aborder que le HTML. <br> En réalisant ce projet de CV avec ces deux langages, cela m'a permis de mieux comprendre la relation entre ces langages <br> et surtout de me familiariser un peu plus avec le CSS.</p>
 
         <img class="img-flou" src="../images/image-cv-1.png" alt="une image flou">
 
@@ -78,7 +75,7 @@ modals.forEach(function (modal, index) {
 
         <h2><span>Création 2 - Le Cahier des Charges</span></h2>
 
-        <p> Découvre le second projet que j'ai réalisé, cette fois au format PDF !</p>
+        <p> Découvre le second projet que j'ai réalisé, cette fois au format PDF ! <br> Pas de code cette fois-ci. <br> Ce projet était peut-être le moins amusant de ce portfolio, mais il était nécessaire. <br> Il m'a permis de mieux comprendre la façon dont se construit un cahier des charges <br> mais aussi les bonnes questions à se poser. </p>
 
         <img class="img-flou" src="../images/cdc-flou.png" alt="une image flou">
 
@@ -103,7 +100,7 @@ modals.forEach(function (modal, index) {
 
         <h2><span>Création 3 - Dynamiser un Espace Commentaire</span></h2>
 
-        <p> Découvre le premier projet qui m'a permis de découvrir le language JavaScript !</p>
+        <p> Découvre le premier projet qui m'a permis de découvrir le language JavaScript ! <br> Alors pour le coup, je l'ai pensé au début et je le pense toujours, <br> JavaScript est vraiment plus complexe que les précédents langages que j'ai étudiés ! <br> Mais ce projet m'a beaucoup aidé à y voir un peu plus clair dans la logique de JavaScript.</p>
 
         <img class="img-flou" src="../images/comment-section-flou.png" alt="une image flou">
 

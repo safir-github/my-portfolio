@@ -1,44 +1,42 @@
 <script setup>
+import { ref, onMounted } from 'vue';
 
-document.addEventListener("DOMContentLoaded", function () {
+onMounted(() => {
+  // pour récupérer les boutons et modals
+  let openButtons = document.querySelectorAll(".open-modal");
+  let closeButtons = document.querySelectorAll(".close-modal");
+  let modals = document.querySelectorAll(".modal");
 
-// pour récupérer les boutons et modals
-let openButtons = document.querySelectorAll(".open-modal");
-let closeButtons = document.querySelectorAll(".close-modal");
-let modals = document.querySelectorAll(".modal");
-
-// pour faire appaître la modal au clic du bouton open
-openButtons.forEach(function (button, index) {
+  // pour faire appaître la modal au clic du bouton open
+  openButtons.forEach(function (button, index) {
     button.addEventListener("click", function () {
-        modals[index].style.display = "block";
+      modals[index].style.display = "block";
     });
-});
+  });
 
-// pour faire disparaître la modal au clic du bouton close
-closeButtons.forEach(function (button, index) {
+  // pour faire disparaître la modal au clic du bouton close
+  closeButtons.forEach(function (button, index) {
     button.addEventListener("click", function () {
-        modals[index].style.display = "none";
+      modals[index].style.display = "none";
     });
-});
+  });
 
-
-// pour fermer la modal lorsqu'on clic en dehors d'elle
-window.addEventListener("click", function (event) {
-modals.forEach(function (modal, index) {
-    if (!modal.contains(event.target) && !event.target.classList.contains("open-modal")) {
+  // pour fermer la modal lorsqu'on clic en dehors d'elle
+  window.addEventListener("click", function (event) {
+    modals.forEach(function (modal, index) {
+      if (!modal.contains(event.target) && !event.target.classList.contains("open-modal")) {
         modals[index].style.display = "none";
-    }
+      }
+    });
+  });
 });
-});
-});
-
 </script>
+
 
 <template>
 
   <main>
 
-    <!-- conseil pour résoudre ce problème d'ouverture de la modal -->
     <p class="modal-bug">(Si les modals ne s'ouvrent pas, pensez à actualiser la page !)</p>
 
     <h1><span>Mon Portfolio</span></h1>

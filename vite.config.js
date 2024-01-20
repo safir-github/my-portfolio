@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': './src', // Utiliser un chemin relatif
+      '@': '/src',
     },
   },
 });

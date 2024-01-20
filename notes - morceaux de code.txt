@@ -1,0 +1,83 @@
+-------------------------------------------------------------------
+"index.js" : 
+
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import CreationsView from '../views/CreationsView.vue';
+import ContactView from '../views/ContactView.vue';
+import NotFound from '../views/NotFound.vue';
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView
+    },
+    {
+      path: '/creations',
+      name: 'creations',
+      component: CreationsView
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: ContactView
+    },
+    
+    {
+      path: '/:catchAll(.*)',
+      name: 'NotFound',
+      component: () => import('../views/NotFound.vue')
+    }
+  ]
+});
+
+export default router;
+
+-----------------------------------------------
+"vite.config.js" : 
+
+import { fileURLToPath, URL } from 'node:url'
+
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    vue(),
+  ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  }
+})
+
+
+-----------------------------------------------------------
+
+"index.html" de "dist" :
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon2.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez les créations et projets de Safir Lemoudaa, apprenti développeur web et mobile passionné par l'innovation et la création. Explorez son parcours, ses compétences, et ses contributions au monde du développement.">
+    <meta name="keywords" content="développeur web, développeur web mobile, innovation, création, HTML, CSS, JavaScript, portfolio, projets, compétences">
+    <meta name="author" content="Safir Lemoudaa">
+    <meta name="robots" content="index, follow">
+    <title>Mon Portfolio</title>
+    <script type="module" src="/assets/index-_ykFKz0J.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Et7kno8U.css">
+    <base href="/my-portfolio/">
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+
+</html>  

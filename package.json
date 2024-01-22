@@ -2,11 +2,9 @@
   "name": "projet-bilan1-v3",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
     "deploy": "vue-cli-service build --mode production && gh-pages -d dist"
   },
   "dependencies": {
@@ -15,8 +13,7 @@
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.3",
-    "gh-pages": "^6.1.1",
-    "vite": "^5.0.12"
+    "@vue/cli-service": "^5.0.8",
+    "gh-pages": "^6.1.1"
   }
 }
